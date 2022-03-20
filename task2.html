@@ -1,0 +1,44 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+Number Pyramid
+        </div>
+        <script>
+            function printPyramid(){
+                let n = prompt("Please enter your lucky number");
+                // let n = 5;
+                let string = "";
+                
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= 2*(n-i+1) - 2; j++) {
+    string += " ";
+  }
+  for (let k = 1; k <= 2*(i-1)+1; k+=2) {
+      string += k + " ";
+  }
+  string += "<br>";
+}
+for (let i = 1; i <= n - 1; i++) {
+  for (let j = 1; j <= 2*i; j++) {
+    string += " ";
+  }
+  for (let k = 1; k <= 2*(n-i); k+=2) {
+    if(k%2 != 0) {
+      string += k + " ";
+    }
+  }
+  string += "<br>";
+}
+document.write(string);
+
+            }
+            
+
+            printPyramid();
+
+        </script>
+    </body>
+</html>
